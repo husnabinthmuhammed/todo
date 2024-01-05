@@ -1,0 +1,18 @@
+{% extends 'index.html' %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="{% static 'taskdetails.css' %}">
+</head>
+<body>
+
+    <h1>{{tasks.task}}</h1>
+    {% if tasks.completed %}Completed{% else %}Pending{% endif %}
+    <a href="{% url 'task' %}">go Back...</a>
+
+</body>
+</html>
+{% endblock content %}
